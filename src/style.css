@@ -1,0 +1,214 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  list-style-type: none;
+  font-family: sans-serif;
+}
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+      'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+      sans-serif;
+      overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+  }
+
+:root(){
+  -primaryColor:#57B2E1;
+}
+  
+.header{
+  display: flex;
+  height: 10vh;
+  position:sticky;
+  margin-top: 10px;
+  margin-right: 10px;
+  top: 0;
+  background-color: #fff;
+  z-index: 1;
+
+}
+.header .right{
+  display: flex;
+  align-items: center;
+  background-color:#57B2E1;
+  margin-left: 100px;
+  flex: 1;
+}
+.header .right .content-right{
+  margin-left: 10px;
+  color: #fff;
+  font-size: 20px;
+  /* background-color: rgb(247, 250, 250); */
+}
+.header .left{
+  display: flex;
+  align-items: center;
+  margin-left: 50px;
+}
+.header .left .content-left{
+  display: flex;
+  justify-content: space-between;
+}
+i{
+  color: #4519ab;
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold; 
+  margin-right: 10px;
+}
+.fa-bars, .fa-edit, .fa-trash{
+  color: #f5efef;
+  cursor: pointer;
+}
+.header .left h1{
+  color: #57B2E1;
+  font-size: 25px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+.sidebar{
+  display: flex; 
+  margin-left: 10px;
+}
+.sidebar .sidebar-content{
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  /* background-color: blue; */
+  border-right: 2px solid rgba(176, 196, 222,0.2);
+  min-height: 100vh;
+}
+.sidebar .sidebar-content .profile{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.sidebar .sidebar-content .profile img{
+  height: 80px;
+  width: 80px;
+  margin-top: -58px;
+
+} 
+.sidebar .sidebar-content .profile .lecture-name{
+  text-transform: capitalize;
+  color:#4519ab;
+  font-weight: bold;
+  font-size: 22px;
+  text-align: center;
+  margin: 4px;
+}
+.sidebar .sidebar-content .profile .lecture-id{
+  color: silver;
+  font-size: 18px;
+  text-align: center;
+}
+
+.sidebar .sidebar-content .navbar-items{
+  display: flex;
+  flex-direction: column;
+  /* align-content: left; */
+  margin: 8px;
+  margin-top: -15px;
+  padding: 10px;
+}
+.sidebar .sidebar-content .navbar .navbar-items li{
+  outline: none;
+  padding: 10px;
+  background-color: transparent;
+  border: none;
+  margin-right: 70px;
+
+}
+.sidebar .sidebar-content .navbar-items li a{
+  text-decoration: none;
+  color: rgb(31, 112, 139);
+  font-size: 16px;
+  font-family: sans-serif;
+  font-weight: normal;
+}
+
+
+.content{
+    /* background-color: rgb(15, 29, 34); */
+    margin-top: 10px;
+    flex: 1;
+    margin-left: 325px;
+    margin-right: 10px;
+    min-height: 100vh;
+    border-radius: 5px;
+}
+.content .main {
+  /* position: absolute; */
+  /* top: 60px; */
+   /* width: calc(100% - 260px); */
+  min-height: 100vh;
+  /* left: 260px;  */
+  background-color: #fff;
+}
+
+.content .cards {
+  width: 100%;
+  padding: 35px 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+}
+
+.content .cards .card {
+  padding: 20px;
+  display: flex;
+  align-items:center;
+  justify-content: space-between;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 7px 25px rgba(0, 0, 0, 0.08);
+}
+
+.content .cards .card .number {
+  font-size: 35px;
+  font-weight: 500;
+  color: #299B63;
+}
+
+.content .cards .card .card-name {
+  color: #888;
+  font-weight: 600;
+}
+
+.content .cards .card .icon-box i {
+  font-size: 45px;
+  color: #299b63;
+}
+
+.content .img-user{
+  height: 100%;
+  width: 95%;
+}
+.content .modal {
+  display: block;
+  background-color: rgba(11, 10, 117, 0.5);
+}
+
+.modal-dialog {
+  margin-top: 10%;
+}
+
+.modal-content {
+  background-color: #fff;
+}
+
+.modal-body {
+  padding: 20px;
+}
+.btn-hvr:hover{
+  background-color: blueviolet;
+}
+

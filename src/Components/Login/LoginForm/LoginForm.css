@@ -1,0 +1,113 @@
+.title {
+  color: #000;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-family: "Noto Sans Mono", monospace;
+}
+
+.subtitle {
+  color: rgb(69, 67, 67);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-family: "Noto Sans Mono", monospace;
+}
+
+.inputs_container {
+  display: flex;
+  flex-direction: column;
+  font-family: "Noto Sans Mono", monospace;
+}
+
+.inputs_container input {
+  font-family: "Noto Sans Mono", monospace;
+  width: 95%;
+  margin: 1.5rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.3);
+  border-radius: 20px;
+  font-size: 17px;
+  font-family: inherit;
+  outline: 0;
+  border: 0;
+}
+
+.login_button {
+  display: block;
+  margin: 3rem auto 1rem auto;
+  font-family: "Noto Sans Mono", monospace;
+  width: 95%;
+  padding: 0.75rem 1rem;
+  border-radius: 25px;
+  outline: 0;
+  font-size: 1rem;
+  font-family: inherit;
+  cursor: pointer;
+  background-color: #867857;
+  color: white;
+  border: 2px solid transparent;
+  margin-top: 15px;
+}
+
+.login_button:hover {
+  background-color:  #473f2a;
+  font-family: "Noto Sans Mono", monospace;
+}
+
+.link_container {
+  display: flex;
+  justify-content: center;
+  
+}
+
+.small {
+  color: rgb(127, 103, 245);
+  text-align: center;
+  font-size: 0.85rem;
+  text-decoration: underline;
+  margin-bottom: 5rem;
+  cursor: pointer;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: -20px;
+}
+
+.icon {
+  color: #867857;
+  cursor: pointer;
+}
+
+.error_msg {
+  color: red;
+  padding-left: 1rem;
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+@media only screen and (max-width: 620px) {
+  .inputs_container input {
+    width: 100%;
+  }
+
+  .login_button {
+    width: 100%;
+  }
+
+  .error_msg {
+    padding-left: 0.2rem;
+  }
+}
+
+@media only screen and (max-height: 670px) {
+  .subtitle {
+    margin-bottom: 2rem;
+  }
+
+  .small {
+    margin-bottom: 3rem;
+  }
+}
