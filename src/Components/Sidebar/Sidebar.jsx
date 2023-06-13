@@ -1,7 +1,7 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
 import Profile from '../../images/profile.png'
-
+// SIdebar component
 const Sidebar = (props) => {
   return (
     <div className='sidebar'>
