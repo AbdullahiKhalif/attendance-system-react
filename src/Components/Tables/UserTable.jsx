@@ -1,5 +1,49 @@
 import React from 'react'
+import Swal from 'sweetalert2';
 const UserTable = () => {
+    const handleUpdate = () => {
+        Swal.fire(
+            'Warning',
+            'You are not allowed to update this account.',
+            'warning'
+  )
+    }
+    const handleDelate = () => {
+        const swalWithBootstrapButtons = Swal.mixin({
+            customClass: {
+              confirmButton: 'btn btn-success m-1',
+              cancelButton: 'btn btn-danger m-1'
+            },
+            buttonsStyling: false
+          })
+          
+          swalWithBootstrapButtons.fire({
+            title: 'Are you sure?',
+            text: "You won't be able to revert this!",
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonText: 'Yes, delete it!',
+            cancelButtonText: 'No, cancel!',
+            reverseButtons: true
+          }).then((result) => {
+            if (result.isConfirmed) {
+              swalWithBootstrapButtons.fire(
+                'Deleted!',
+                'Your file has been deleted.',
+                'success'
+              )
+            } else if (
+              /* Read more about handling dismissals below */
+              result.dismiss === Swal.DismissReason.cancel
+            ) {
+              swalWithBootstrapButtons.fire(
+                'Cancelled',
+                'Your imaginary file is safe :)',
+                'error'
+              )
+            }
+          })
+    }
   return (
     <div>
        <div className="table-responsive">
@@ -28,8 +72,8 @@ const UserTable = () => {
                         <td>abdullahi.a.khalif@gmail.com</td>
                         <td>618390115</td>
                         <td>
-                            <a href="" className='btn btn-info'><i className='fas fa-edit'></i></a>&nbsp;&nbsp;
-                            <a href="" className='btn btn-danger'><i className='fas fa-trash'></i></a>
+                            <a href="#" className='btn btn-info' onClick={handleUpdate}><i className='fas fa-edit'></i></a>&nbsp;&nbsp;
+                            <a href="#" className='btn btn-danger' onClick={handleDelate} ><i className='fas fa-trash'></i></a>
                         </td>
                     </tr>
 
@@ -43,8 +87,8 @@ const UserTable = () => {
                         <td>sadak2017@gmail.com</td>
                         <td>616777399</td>
                         <td>
-                            <a href="" className='btn btn-info'><i className='fas fa-edit'></i></a>&nbsp;&nbsp;
-                            <a href="" className='btn btn-danger'><i className='fas fa-trash'></i></a>
+                            <a href="#" className='btn btn-info' onClick={handleUpdate}><i className='fas fa-edit'></i></a>&nbsp;&nbsp;
+                            <a href="#" className='btn btn-danger' onClick={handleDelate}><i className='fas fa-trash'></i></a>
                         </td>
                     </tr>
 
@@ -58,8 +102,8 @@ const UserTable = () => {
                         <td>moha.gedi@gmail.com</td>
                         <td>619019805</td>
                         <td>
-                            <a href="" className='btn btn-info'><i className='fas fa-edit'></i></a>&nbsp;&nbsp;
-                            <a href="" className='btn btn-danger'><i className='fas fa-trash'></i></a>
+                            <a href="#" className='btn btn-info' onClick={handleUpdate}><i className='fas fa-edit'></i></a>&nbsp;&nbsp;
+                            <a href="#" className='btn btn-danger' onClick={handleDelate}><i className='fas fa-trash'></i></a>
                         </td>
                     </tr>
 
@@ -73,8 +117,8 @@ const UserTable = () => {
                         <td>ayanha2023@gmail.com</td>
                         <td>615555555</td>
                         <td>
-                            <a href="" className='btn btn-info'><i className='fas fa-edit'></i></a>&nbsp;&nbsp;
-                            <a href="" className='btn btn-danger'><i className='fas fa-trash'></i></a>
+                            <a href="#" className='btn btn-info' onClick={handleUpdate}><i className='fas fa-edit'></i></a>&nbsp;&nbsp;
+                            <a href="#" className='btn btn-danger' onClick={handleDelate}><i className='fas fa-trash'></i></a>
                         </td>
                     </tr>
 
@@ -88,8 +132,8 @@ const UserTable = () => {
                         <td>abdullahi.a.khalif@gmail.com</td>
                         <td>61000000</td>
                         <td>
-                            <a href="" className='btn btn-info'><i className='fas fa-edit'></i></a>&nbsp;&nbsp;
-                            <a href="" className='btn btn-danger'><i className='fas fa-trash'></i></a>
+                            <a href="#" className='btn btn-info' onClick={handleUpdate}><i className='fas fa-edit'></i></a>&nbsp;&nbsp;
+                            <a href="#" className='btn btn-danger' onClick={handleDelate}><i className='fas fa-trash'></i></a>
                         </td>
                     </tr>
                 </tbody>

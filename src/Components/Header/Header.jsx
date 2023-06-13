@@ -12,7 +12,7 @@ const Header = () => {
                     fontWeight: 'bold',
                     marginRight: '10px',
                 }}></i>
-                <h1>LECTURER</h1>
+                <h1>LECTURE</h1>
            </div>
         </div>
         <div className="right">

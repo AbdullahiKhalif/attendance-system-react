@@ -31,7 +31,7 @@ const App = () => {
           <Routes>
               <Route path='/' element={<Dashboard />}/>
               <Route path='/user' element={<RegisterUser/>}/>
-              <Route path='/courses' element={<CourseRegistration/>}/>
+              <Route path='/courses' element={<CourseRegistration user={user}/>}/>
               <Route path='/teacherAttendance' element={<TeacherAttendance/>}/>
               <Route path='/courses/:id' element={<CA202/>}/>
               {/* <Route path='/courses/CA203' element={<CA203/>}/> */}
@@ -41,8 +41,10 @@ const App = () => {
               <Route path='/lectureProfile' element={<TeacherProfile user={user} setUser={setUser}/>}/>
               {/* <Route path='/' element={ <LoginForm/>}/> */}
           </Routes>
+          
 
       </div>
+      
     </div>
       </>
     ) : (

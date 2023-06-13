@@ -5,6 +5,8 @@ import GoogleIcon from "@mui/icons-material/Google";
 import FacebookIcon from "@mui/icons-material/Facebook";
 import TwitterIcon from "@mui/icons-material/Twitter";
 import { database } from "../utils/database";
+import Sidebar from "../../Sidebar/Sidebar";
+import App from "../../../App";
 // import styled from '@emotion/styled';
 const LoginForm = ({ setIsLoggedIn, setUser }) => {
   const [username, setUsername] = useState("");
@@ -46,6 +48,7 @@ const LoginForm = ({ setIsLoggedIn, setUser }) => {
         setErrorMessages({});
         setIsLoggedIn(true);
         setUser(username);
+        <App/>
         
       }
     } else {

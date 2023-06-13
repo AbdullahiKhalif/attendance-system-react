@@ -5,7 +5,7 @@ import { Modal, Button } from "react-bootstrap";
 import {useState} from 'react'
 import CourseForm from '../Forms/CourseForm';
 
-const CourseRegistration = () => {
+const CourseRegistration = ({user}) => {
     const [showModal, setShowModal] = useState(false);
 
     const handleClose = () => setShowModal(false);
@@ -22,7 +22,7 @@ const CourseRegistration = () => {
       </div>
       <div className='mt-4'>
         <Link to="CA202" style={{textDecoration:'none'}}>
-        {<ViewCourses/>}
+        {<ViewCourses user={user}/>}
         </Link>
       </div>
 

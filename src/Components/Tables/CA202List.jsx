@@ -6,9 +6,9 @@ const CA202List = () => {
          <div className="row">
                     <div className="col-sm-4"></div>
                     <div className="col-sm-4"></div>
-                    <div className="col-sm-4" style={{padding:'1px'}}>
+                    {/* <div className="col-sm-4" style={{padding:'1px'}}>
                        Check All:  <input type="checkbox" style={{height:'20px', width:'20px'}}/>
-                    </div>
+                    </div> */}
         </div>
         <table className='table table-hover'>
        
